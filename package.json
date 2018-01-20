@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
+    "eslint-config-rallycoding": "^3.2.0",
+    "qs": "^6.5.1",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.32.0",
     "react-dom": "^16.2.0",
+    "react-materialize": "^1.1.2",
     "react-scripts": "1.1.0"
   },
   "scripts": {
