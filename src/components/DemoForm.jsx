@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { form, Button, FormControl } from "react-bootstrap";
+import { Button, FormControl } from "react-bootstrap";
 import axios from "axios";
 import FileUploader from "./FileUploader";
 import ResultsTable from "./ResultsTable";
