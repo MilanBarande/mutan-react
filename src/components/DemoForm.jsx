@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { form, Button, FormControl } from "react-bootstrap";
 import axios from "axios";
 import FileUploader from "./FileUploader";
+import ResultsTable from "./ResultsTable";
 import { url } from "../Constants.js";
 
 const qs = require("qs");
@@ -15,9 +16,7 @@ class DemoForm extends Component {
     super(props);
     this.state = {
       visual: null,
-      question: "What is it ?",
-      output: null,
-      probabilities: null
+      question: "What is it ?"
     };
     this.handleFileInput = this.handleFileInput.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -45,13 +44,7 @@ class DemoForm extends Component {
   fileUpload(file) {
     axios
       .post(url, qs.stringify({ visual: file, question: this.state.question }))
-      .then(response =>
-        this.setState({
-          output: response.data.ans,
-          probabilities: response.data.val
-        })
-      );
-    // TODO: Créer un array d'objets answer: et proba:
+      .then(response => this.props.onDataFetch(response));
   }
 
   list = elements => elements.map(element => <li key={element}>{element}</li>);
@@ -105,15 +98,6 @@ class DemoForm extends Component {
         >
           Submit
         </Button>
-        <div className="results">
-          <ul className="list">{data && this.list(data)}</ul>
-          <ul className="list">
-            {["test", "salut"].map(number => <li>{number}</li>)}
-            {
-              //proba.map(prob => <li key={prob}>{prob.toFixed(2) * 100} %</li>)
-            }
-          </ul>
-        </div>
       </form>
     );
   }
