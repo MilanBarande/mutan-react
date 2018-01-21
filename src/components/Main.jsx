@@ -6,11 +6,12 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = { data: null };
+    this.onDataFetch = this.onDataFetch.bind(this);
   }
 
-  onDataFetch = data => {
+  onDataFetch(data) {
     this.setState({ data });
-  };
+  }
 
   render() {
     const fakeData = {
