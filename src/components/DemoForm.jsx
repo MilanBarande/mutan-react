@@ -14,7 +14,8 @@ class DemoForm extends Component {
     super(props);
     this.state = {
       visual: null,
-      question: 'What is it ?'
+      question: 'What is it ?',
+      error: ''
     };
     this.handleFileInput = this.handleFileInput.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -23,8 +24,12 @@ class DemoForm extends Component {
   }
 
   onFormSubmit(event) {
+    const { visual } = this.state;
+    if (!visual) {
+      this.setState({ error: 'Please upload an image' });
+    }
     event.preventDefault();
-    this.fileUpload(this.state.visual);
+    this.fileUpload(visual);
   }
 
   handleQuestionInput(e) {
@@ -57,39 +62,46 @@ class DemoForm extends Component {
     return (
       <Grid>
         <form className="demo-form" onSubmit={this.onFormSubmit}>
-          <label htmlFor="file" className="label-file btn btn-default">
-            Upload an image
-          </label>
-          <FormControl
-            type="file"
-            onChange={this.handleFileInput}
-            id="file"
-            className="input-file"
-          />
-          {isImage ? (
-            <div className={visual ? 'preview' : 'hidden'}>
-              <img
-                src={visual}
-                ref={p => {
-                  this.preview = p;
-                }}
-                alt="preview"
-              />
-            </div>
-          ) : null}
-          {visual &&
-          !isImage && (
-            <span className="error">
-              This file is not an image, please try again with an image.
-            </span>
-          )}
-          <FormControl
-            type="text"
-            placeholder={placeholder}
-            onChange={this.handleQuestionInput}
-            className="text-input form-element"
-          />
-          <Button type="submit" className="submit-button" bsStyle="primary" bsSize="medium">
+          <div className="file-uploader">
+            <label htmlFor="file" className="label-file btn btn-default">
+              Upload an image
+            </label>
+            <FormControl
+              type="file"
+              onChange={this.handleFileInput}
+              id="file"
+              className="input-file"
+            />
+            {isImage ? (
+              <div className={visual ? 'preview' : 'hidden'}>
+                <img
+                  src={visual}
+                  ref={p => {
+                    this.preview = p;
+                  }}
+                  alt="preview"
+                />
+              </div>
+            ) : null}
+            {visual &&
+            !isImage && (
+              <span className="error">
+                This file is not an image, please try again with an image.
+              </span>
+            )}
+          </div>
+          <div className="question-input form-element">
+            <label htmlFor="question" className="label-question">
+              Enter your question
+            </label>
+            <FormControl
+              id="question"
+              type="text"
+              placeholder={placeholder}
+              onChange={this.handleQuestionInput}
+            />
+          </div>
+          <Button type="submit" className="submit-button" bsStyle="primary">
             Ask MUTAN
           </Button>
         </form>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from 'react-bootstrap';
 
 const PageFooter = () => (
   <footer className="footer-distributed">
@@ -38,8 +37,8 @@ const PageFooter = () => (
     <div className="footer-right">
       <p className="footer-company-about">
         <span>About MUTAN</span>
-        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu
-        auctor lacus vehicula sit amet.
+        MUTAN is based on Neural Networks and the Tucker Decomposition to address this machine
+        learning problem.
       </p>
 
       <div className="footer-icons">

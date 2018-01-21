@@ -18,10 +18,11 @@ class Main extends Component {
       answers: ['chat', 'chien', 'cochon', 'lapin', 'banane'],
       probabilities: ['44,32', '35,1', '25', '19', '7,4']
     };
+    const { data } = this.state;
     return (
       <div className="container">
         <DemoForm onDataFetch={this.onDataFetch} />
-        <ResultsTable data={this.state.data || fakeData} />
+        <ResultsTable data={data || fakeData} />
       </div>
     );
   }

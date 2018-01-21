@@ -5,21 +5,31 @@ const PageNavbar = () => (
   <Navbar fixedTop>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="#home">MUTAN VQA</a>
+        <a className="navbar-link" href="#home">
+          MUTAN VQA
+        </a>
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
-      <NavItem eventKey={1} href="https://arxiv.org/abs/1705.06676">
-        Read the Paper
+      <NavItem className="navbar-link" target="_blank" href="https://arxiv.org/abs/1705.06676">
+        The Paper
       </NavItem>
-      <NavItem eventKey={2} href="https://github.com/Cadene/vqa.pytorch">
-        Github repository
+      <NavItem className="navbar-link" target="_blank" href="https://github.com/Cadene/vqa.pytorch">
+        Github Repository
       </NavItem>
-      <NavDropdown eventKey={3} title="The authors" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Hedi Ben-Younes</MenuItem>
-        <MenuItem eventKey={3.2}>Rémi Cadène</MenuItem>
-        <MenuItem eventKey={3.3}>Matthieu Cord</MenuItem>
-        <MenuItem eventKey={3.4}>Nicolas Thome</MenuItem>
+      <NavDropdown title="The authors" id="basic-nav-dropdown">
+        <MenuItem className="navbar-link" target="_blank" href="https://twitter.com/labegne">
+          Hedi Ben-Younes
+        </MenuItem>
+        <MenuItem className="navbar-link" target="_blank" href="http://remicadene.com/">
+          Rémi Cadène
+        </MenuItem>
+        <MenuItem className="navbar-link" target="_blank" href="http://webia.lip6.fr/~cord/">
+          Matthieu Cord
+        </MenuItem>
+        <MenuItem className="navbar-link" target="_blank" href="http://webia.lip6.fr/~thomen/">
+          Nicolas Thome
+        </MenuItem>
       </NavDropdown>
     </Nav>
   </Navbar>

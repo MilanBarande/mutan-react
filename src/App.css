@@ -13,19 +13,8 @@
   margin: 0 50px;
 }
 
-.header {
-}
-
-.list {
-  list-style-type: none;
-}
-
-.results {
-  display: flex;
-  justify-content: space-between;
-  max-width: 500px;
-  margin-top: 30px;
-  padding: 20px 0;
+.table-responsive {
+  margin-left: 25px;
 }
 
 .preview > img {
@@ -47,8 +36,17 @@
   font-weight: bold;
 }
 
+.label-question {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
 .input-file {
   display: none !important;
+}
+
+.navbar-link:hover {
+  color: #235585;
 }
 
 .footer-distributed {
