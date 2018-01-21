@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "eslint": "^4.16.0",
     "eslint-config-rallycoding": "^3.2.0",
-    "eslint-plugin-import": "1.16.0",
     "eslint-plugin-jsx-a11y": "2.2.3",
     "eslint-plugin-react": "6.10.3",
     "lodash": "^4.17.4",
@@ -13,7 +13,6 @@
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.0",
     "react-dom": "^16.2.0",
-    "react-materialize": "^1.1.2",
     "react-scripts": "1.1.0"
   },
   "scripts": {

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import DemoForm from "./DemoForm";
-import ResultsTable from "./ResultsTable";
+import React, { Component } from 'react';
+import DemoForm from './DemoForm';
+import ResultsTable from './ResultsTable';
 
 class Main extends Component {
   constructor(props) {
@@ -14,8 +14,8 @@ class Main extends Component {
 
   render() {
     const fakeData = {
-      answers: ["chat", "chien", "cochon", "lapin", "banane"],
-      probabilities: ["44,32", "35,1", "25", "19", "7,4"]
+      answers: ['chat', 'chien', 'cochon', 'lapin', 'banane'],
+      probabilities: ['44,32', '35,1', '25', '19', '7,4']
     };
     return (
       <div className="container">
