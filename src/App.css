@@ -1,8 +1,52 @@
 .demo-form {
-  margin: 50px 20px;
+  margin: 30px 20px;
 }
 
-.text-input {
+.header {
+  background-color: #292c33;
+  padding: 80px;
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+
+.header-title {
+  font-size: 50px;
+  font-family: ansonregular;
+}
+
+.instructions {
+  font-size: 28px;
+  font-family: ansonregular;
+  margin-bottom: 20px;
+}
+
+.instructions2 {
+  font-size: 22px;
+  font-family: ansonregular;
+  margin: 25px 0;
+}
+
+.header-subtitle {
+  font-size: 22px;
+  font-family: Avenir;
+  font-weight: 100;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+
+.footer-distributed {
+  margin-top: 50px !important;
+  padding: 25px 50px !important;
+}
+
+.footer-icon {
+  color: rgb(200, 200, 200);
+}
+
+.footer-icon:hover {
+  color: rgb(255, 255, 255);
 }
 
 .form-element {
@@ -27,8 +71,14 @@
   color: red;
 }
 
+.upload-button {
+  width: 300px;
+}
+
 .submit-button {
   padding: 7px 25px;
+  font-weight: 600;
+  width: 300px;
 }
 
 .label-file {
@@ -39,6 +89,10 @@
 .label-question {
   margin-bottom: 0;
   margin-left: 5px;
+}
+
+.question-input {
+  width: 60%;
 }
 
 .input-file {
@@ -179,17 +233,11 @@
 
 .footer-distributed .footer-icons a {
   display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: #33383b;
+  padding: 0 10px;
   border-radius: 2px;
-
   font-size: 20px;
-  color: #ffffff;
   text-align: center;
   line-height: 35px;
-
   margin-right: 3px;
   margin-bottom: 5px;
 }

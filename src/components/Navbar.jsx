@@ -12,7 +12,7 @@ const PageNavbar = () => (
     </Navbar.Header>
     <Nav>
       <NavItem className="navbar-link" target="_blank" href="https://arxiv.org/abs/1705.06676">
-        The Paper
+        Read the Paper
       </NavItem>
       <NavItem className="navbar-link" target="_blank" href="https://github.com/Cadene/vqa.pytorch">
         Github Repository

@@ -8,10 +8,10 @@ const PageFooter = () => (
       </h3>
 
       <p className="footer-links">
-        <a href="#">About</a>
-        ·
-        <a href="#">Faq</a>
-        ·
+        <a href="#">About </a>
+
+        <a href="#">Faq </a>
+
         <a href="#">Contact</a>
       </p>
 
@@ -43,16 +43,16 @@ const PageFooter = () => (
 
       <div className="footer-icons">
         <a href="#">
-          <i className="fa fa-facebook" />
+          <i className="fa fa-facebook footer-icon" />
         </a>
         <a href="#">
-          <i className="fa fa-twitter" />
+          <i className="fa fa-twitter footer-icon" />
         </a>
         <a href="#">
-          <i className="fa fa-linkedin" />
+          <i className="fa fa-linkedin footer-icon" />
         </a>
         <a href="#">
-          <i className="fa fa-github" />
+          <i className="fa fa-github footer-icon" />
         </a>
       </div>
     </div>

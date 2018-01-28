@@ -62,8 +62,9 @@ class DemoForm extends Component {
     return (
       <Grid>
         <form className="demo-form" onSubmit={this.onFormSubmit}>
+          <h4 className="instructions">Try it out!</h4>
           <div className="file-uploader">
-            <label htmlFor="file" className="label-file btn btn-default">
+            <label htmlFor="file" className="label-file btn btn-warning upload-button">
               Upload an image
             </label>
             <FormControl
@@ -104,6 +105,7 @@ class DemoForm extends Component {
           <Button type="submit" className="submit-button" bsStyle="primary">
             Ask MUTAN
           </Button>
+          <h4 className="instructions2">The results will appear below</h4>
         </form>
       </Grid>
     );
