@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DemoForm from './DemoForm';
 import ResultsTable from './ResultsTable';
+import { fakeData } from '../Constants';
 
 class Main extends Component {
   constructor(props) {
@@ -10,14 +11,11 @@ class Main extends Component {
   }
 
   onDataFetch(data) {
+    console.log(data);
     this.setState({ data });
   }
 
   render() {
-    const fakeData = {
-      answers: ['chat', 'chien', 'cochon', 'lapin', 'banane'],
-      probabilities: ['44,32', '35,1', '25', '19', '7,4']
-    };
     const { data } = this.state;
     return (
       <div className="container">

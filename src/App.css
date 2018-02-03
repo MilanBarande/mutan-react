@@ -1,5 +1,7 @@
 .demo-form {
-  margin: 30px 20px;
+  width: 50%;
+  margin: 50px 25% 50px 33%;
+  text-align: center;
 }
 
 .header {
@@ -15,6 +17,14 @@
   font-family: ansonregular;
 }
 
+.navbar {
+  letter-spacing: 2px;
+}
+
+.navbar-link:hover {
+  color: #235585;
+}
+
 .instructions {
   font-size: 28px;
   font-family: ansonregular;
@@ -24,7 +34,7 @@
 .instructions2 {
   font-size: 22px;
   font-family: ansonregular;
-  margin: 25px 0;
+  margin: 25px 0 25px 20px;
 }
 
 .header-subtitle {
@@ -37,7 +47,7 @@
 }
 
 .footer-distributed {
-  margin-top: 50px !important;
+  margin-top: 40px !important;
   padding: 25px 50px !important;
 }
 
@@ -59,12 +69,14 @@
 
 .table-responsive {
   margin-left: 25px;
+  margin-top: 10px;
 }
 
 .preview > img {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 560px;
+  max-height: 350px;
   margin-top: 20px;
+  border-radius: 4px;
 }
 
 .error {
@@ -72,13 +84,12 @@
 }
 
 .upload-button {
-  width: 300px;
+  width: 560px;
 }
 
 .submit-button {
   padding: 7px 25px;
-  font-weight: 600;
-  width: 300px;
+  width: 560px;
 }
 
 .label-file {
@@ -87,20 +98,18 @@
 }
 
 .label-question {
-  margin-bottom: 0;
+  margin-bottom: 5px;
   margin-left: 5px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .question-input {
-  width: 60%;
+  width: 560px;
 }
 
 .input-file {
   display: none !important;
-}
-
-.navbar-link:hover {
-  color: #235585;
 }
 
 .footer-distributed {

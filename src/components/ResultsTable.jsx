@@ -3,49 +3,52 @@ import { Table, Grid } from 'react-bootstrap';
 
 class ResultsTable extends Component {
   render() {
-    const { probabilities, answers } = this.props.data;
-    console.log(this.props.data);
+    const { data } = this.props;
     return (
       <Grid>
-        <Table responsive>
-          <thead>
-            <tr>
-              <th data-field="id">Rank</th>
-              <th data-field="name">Answer</th>
-              <th data-field="price">Confidence(%)</th>
-            </tr>
-          </thead>
-          {answers &&
-          probabilities && (
-            <tbody>
+        {data ? (
+          <Table responsive>
+            <thead>
               <tr>
-                <td>1</td>
-                <td>{answers[0]}</td>
-                <td>{probabilities[0]}</td>
+                <th data-field="id">Rank</th>
+                <th data-field="name">Answer</th>
+                <th data-field="price">Confidence(%)</th>
               </tr>
-              <tr>
-                <td>2</td>
-                <td>{answers[1]}</td>
-                <td>{probabilities[1]}</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>{answers[2]}</td>
-                <td>{probabilities[2]}</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>{answers[3]}</td>
-                <td>{probabilities[3]}</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>{answers[4]}</td>
-                <td>{probabilities[4]}</td>
-              </tr>
-            </tbody>
-          )}
-        </Table>
+            </thead>
+            {data.answers &&
+            data.probabilities && (
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>{data.answers[0]}</td>
+                  <td>{data.probabilities[0]}</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>{data.answers[1]}</td>
+                  <td>{data.probabilities[1]}</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>{data.answers[2]}</td>
+                  <td>{data.probabilities[2]}</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>{data.answers[3]}</td>
+                  <td>{data.probabilities[3]}</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>{data.answers[4]}</td>
+                  <td>{data.probabilities[4]}</td>
+                </tr>
+              </tbody>
+            )}
+          </Table>
+        ) : (
+          <h4 className="instructions2">The results will appear bellow</h4>
+        )}
       </Grid>
     );
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 const PageNavbar = () => (
-  <Navbar fixedTop>
+  <Navbar fixedTop className="navbar">
     <Navbar.Header>
       <Navbar.Brand>
         <a className="navbar-link" href="#home">

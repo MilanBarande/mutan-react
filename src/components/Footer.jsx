@@ -6,19 +6,6 @@ const PageFooter = () => (
       <h3>
         UPMC<span>Lip6</span>
       </h3>
-
-      <p className="footer-links">
-        <a href="#">About </a>
-
-        <a href="#">Faq </a>
-
-        <a href="#">Contact</a>
-      </p>
-
-      <p className="footer-company-name">UPMC Lip6 &copy; 2015</p>
-    </div>
-
-    <div className="footer-center">
       <div>
         <i className="fa fa-map-marker" />
         <p>
@@ -32,7 +19,10 @@ const PageFooter = () => (
           <a href="mailto:remi.cadene@icloud.com">remi.cadene@icloud.com</a>
         </p>
       </div>
+      <p className="footer-company-name">UPMC Lip6 &copy; 2015</p>
     </div>
+
+    <div className="footer-center" />
 
     <div className="footer-right">
       <p className="footer-company-about">
@@ -42,16 +32,13 @@ const PageFooter = () => (
       </p>
 
       <div className="footer-icons">
-        <a href="#">
-          <i className="fa fa-facebook footer-icon" />
-        </a>
-        <a href="#">
+        <a href="https://twitter.com/RemiCadene">
           <i className="fa fa-twitter footer-icon" />
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/remi-cadene-6527509b/">
           <i className="fa fa-linkedin footer-icon" />
         </a>
-        <a href="#">
+        <a href="https://github.com/Cadene">
           <i className="fa fa-github footer-icon" />
         </a>
       </div>
