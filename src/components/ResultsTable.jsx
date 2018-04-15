@@ -5,7 +5,7 @@ class ResultsTable extends Component {
   render() {
     const { data } = this.props;
     return (
-      <Grid>
+      <div className="results-table">
         {data ? (
           <Table responsive>
             <thead>
@@ -49,7 +49,7 @@ class ResultsTable extends Component {
         ) : (
           <h4 className="instructions2">The results will appear bellow</h4>
         )}
-      </Grid>
+      </div>
     );
   }
 }

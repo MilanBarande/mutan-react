@@ -1,6 +1,12 @@
 .demo-form {
   width: 50%;
-  margin: 50px 25% 50px 33%;
+  margin: 50px 25% 50px 25%;
+  text-align: center;
+}
+
+.results-table {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -61,10 +67,6 @@
 
 .form-element {
   margin: 25px 0;
-}
-
-.container {
-  margin: 0 50px;
 }
 
 .table-responsive {
