@@ -27,8 +27,17 @@
   letter-spacing: 2px;
 }
 
+.navbar-link {
+  color: grey;
+  cursor: pointer;
+
+}
+
+
+
 .navbar-link:hover {
   color: #235585;
+  decoration: none;
 }
 
 .instructions {

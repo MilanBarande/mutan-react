@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Grid } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 class ResultsTable extends Component {
   render() {
@@ -12,7 +12,7 @@ class ResultsTable extends Component {
               <tr>
                 <th data-field="id">Rank</th>
                 <th data-field="name">Answer</th>
-                <th data-field="price">Confidence(%)</th>
+                <th data-field="price">Confidence (%)</th>
               </tr>
             </thead>
             {data.answers &&

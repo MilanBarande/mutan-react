@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Button, FormControl, Grid } from 'react-bootstrap';
+import { Button, FormControl } from 'react-bootstrap';
 import axios from 'axios';
 import { url } from '../Constants.js';
 
 const qs = require('qs');
 
-/* 
+/*
   global FileReader
 */
 
@@ -15,7 +15,8 @@ class DemoForm extends Component {
     this.state = {
       visual: null,
       question: 'What is it ?',
-      error: ''
+      error: '',
+      isOpenInput: true
     };
     this.handleFileInput = this.handleFileInput.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -33,6 +34,7 @@ class DemoForm extends Component {
   }
 
   handleQuestionInput(e) {
+    console.log('value', e.target.value);
     this.setState({ question: e.target.value });
   }
 
@@ -53,8 +55,8 @@ class DemoForm extends Component {
 
   render() {
     const placeholder =
-      'What is it ? (default) What is in the center of the image ? What kind of animal is this ?';
-    const { visual } = this.state;
+      'Enter your question';
+    const { visual, isOpenInput } = this.state;
     const isImage =
       visual &&
       (typeof visual === 'string' || visual instanceof String) &&
@@ -92,14 +94,28 @@ class DemoForm extends Component {
         </div>
         <div className="question-input form-element">
           <label htmlFor="question" className="label-question">
-            Enter your question
+            Enter your question or click the button bellow to select one among a list of examples
           </label>
-          <FormControl
+          <Button
+            onClick={() => this.setState({ isOpenInput: !isOpenInput })}
+            className="form-element"
+          >
+            {isOpenInput ? 'Give me examples' : 'Let me type a question'}
+          </Button>
+          {isOpenInput ? <FormControl
             id="question"
             type="text"
             placeholder={placeholder}
             onChange={this.handleQuestionInput}
-          />
+          /> :
+      <FormControl componentClass="select" placeholder="select" onChange={this.handleQuestionInput}>
+        <option value="What is it ?">What is it ?</option>
+        <option value="What color is the object ?">What color is the object ?</option>
+        <option value="How many persons are there in this picture ?">
+          How many persons are there in this picture ?
+        </option>
+      </FormControl>
+     }
         </div>
         <Button type="submit" className="submit-button" bsStyle="primary">
           Ask MUTAN
