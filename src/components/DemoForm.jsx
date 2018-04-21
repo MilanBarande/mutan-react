@@ -34,7 +34,6 @@ class DemoForm extends Component {
   }
 
   handleQuestionInput(e) {
-    console.log('value', e.target.value);
     this.setState({ question: e.target.value });
   }
 
@@ -55,7 +54,7 @@ class DemoForm extends Component {
 
   render() {
     const placeholder =
-      'Enter your question';
+      'Enter your question (default: "What is it?")';
     const { visual, isOpenInput } = this.state;
     const isImage =
       visual &&

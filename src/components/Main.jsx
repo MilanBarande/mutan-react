@@ -11,7 +11,6 @@ class Main extends Component {
   }
 
   onDataFetch(data) {
-    console.log(data);
     this.setState({ data });
   }
 
