@@ -4,7 +4,11 @@ import axios from 'axios';
 
 const qs = require('qs');
 
-const url = ENV.IP;
+const url = ENV['IP']; // eslint-disable-line dot-notation
+
+/*
+  global FileReader, ENV
+*/
 
 class DemoForm extends Component {
   constructor(props) {
