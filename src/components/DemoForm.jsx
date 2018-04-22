@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { Button, FormControl } from 'react-bootstrap';
 import axios from 'axios';
-import { url } from '../Constants.js';
 
 const qs = require('qs');
 
-/*
-  global FileReader
-*/
+const url = ENV.IP;
 
 class DemoForm extends Component {
   constructor(props) {
