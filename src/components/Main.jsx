@@ -18,7 +18,7 @@ class Main extends Component {
     return (
       <div className="container">
         <DemoForm onDataFetch={this.onDataFetch} />
-        <ResultsTable data={data} />
+        <ResultsTable result={data} />
       </div>
     );
   }

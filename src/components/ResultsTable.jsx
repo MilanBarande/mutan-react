@@ -3,10 +3,11 @@ import { Table } from 'react-bootstrap';
 
 class ResultsTable extends Component {
   render() {
-    const { data } = this.props;
+    const { result } = this.props;
+    const { data } = result || {};
     return (
       <div className="results-table">
-        {data ? (
+        { data ? (
           <Table responsive>
             <thead>
               <tr>
@@ -15,33 +16,33 @@ class ResultsTable extends Component {
                 <th data-field="price">Confidence (%)</th>
               </tr>
             </thead>
-            {data.answers &&
-            data.probabilities && (
+            {data.ans &&
+            data.val && (
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>{data.answers[0]}</td>
-                  <td>{data.probabilities[0]}</td>
+                  <td>{data.ans[0]}</td>
+                  <td>{data.val[0]}</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>{data.answers[1]}</td>
-                  <td>{data.probabilities[1]}</td>
+                  <td>{data.ans[1]}</td>
+                  <td>{data.val[1]}</td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>{data.answers[2]}</td>
-                  <td>{data.probabilities[2]}</td>
+                  <td>{data.ans[2]}</td>
+                  <td>{data.val[2]}</td>
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td>{data.answers[3]}</td>
-                  <td>{data.probabilities[3]}</td>
+                  <td>{data.ans[3]}</td>
+                  <td>{data.val[3]}</td>
                 </tr>
                 <tr>
                   <td>5</td>
-                  <td>{data.answers[4]}</td>
-                  <td>{data.probabilities[4]}</td>
+                  <td>{data.ans[4]}</td>
+                  <td>{data.val[4]}</td>
                 </tr>
               </tbody>
             )}

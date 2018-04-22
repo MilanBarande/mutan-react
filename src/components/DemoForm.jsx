@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Button, FormControl } from 'react-bootstrap';
 import axios from 'axios';
+import { url } from '../Constants.js';
 
 const qs = require('qs');
 
-const url = process.env.IP; 
+const server = url || process.env.IP;
 
 /*
-  global FileReader, ENV
+  global FileReader
 */
 
 class DemoForm extends Component {
@@ -49,7 +50,7 @@ class DemoForm extends Component {
 
   fileUpload(file) {
     axios
-      .post(url, qs.stringify({ visual: file, question: this.state.question }))
+      .post(server, qs.stringify({ visual: file, question: this.state.question }))
       .then(response => this.props.onDataFetch(response));
   }
 
