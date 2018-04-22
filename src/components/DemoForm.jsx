@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const qs = require('qs');
 
-const url = ENV['IP']; // eslint-disable-line dot-notation
+const url = process.env.IP; 
 
 /*
   global FileReader, ENV
