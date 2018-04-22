@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import DemoForm from './DemoForm';
 import ResultsTable from './ResultsTable';
-import { fakeData } from '../Constants';
+
+const fakeData = {
+  answers: ['chat', 'chien', 'cochon', 'lapin', 'banane'],
+  probabilities: ['44,32', '35,1', '25', '19', '7,4']
+};
 
 class Main extends Component {
   constructor(props) {
